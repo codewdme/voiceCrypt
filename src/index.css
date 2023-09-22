@@ -1,3 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply h-screen;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+.cards {
+  @apply h-[500px] flex items-center gap-12 p-12 px-24 rounded-3xl sticky;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-fill-purple::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background-color: #ba80e6;
+  color: #391952;
+  transition: linear 0.3s;
+  z-index: -1;
+}
+
+.btn-fill-purple:hover:before {
+  height: 100%;
+}
+
+.btn-fill-white::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background-color: #ffffff;
+  color: #391952;
+  transition: linear 0.3s;
+  z-index: -1;
+}
+.btn-fill-white:hover:before {
+  height: 100%;
+}
+
+.navbar-item {
+  @apply text-xl font-bold text-lightPurple hover:ease-in-out hover:text-white transition;
+}
+
+.active {
+  @apply text-white;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
