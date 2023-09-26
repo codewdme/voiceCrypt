@@ -42,13 +42,13 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="mt-4 flex justify-center text-darkPurple bg-white rounded-3xl">
-        <div
-          className="w-11/12 lavender-bg rounded-lg flex flex-col justify-center p-6"
-          style={{ borderRadius: "4rem" }}
-        >
-          <div className="grid grid-cols-6">
-            <div className="col-span-2">
+      <div
+        className="mt-4 flex justify-center text
+      -darkPurple bg-white rounded-3xl"
+      >
+        <div className="w-11/12 lavender-bg rounded-lg flex flex-col justify-center p-6">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="py-8 md:pt-0">
               <h1 className=" font-bold text-4xl  ">VoiceCrypt</h1>
               <h2 className="pl-2 text-sm">by The NetRunners</h2>
             </div>
@@ -80,12 +80,10 @@ const Footer = () => {
               <p className="text-md mb-2">Malaysia</p>
             </div>
           </div>
-          <div className="p-6 py-16 flex items-center justify-between ">
-            <div className="">
-              <button className="text-white py-2 px-4 rounded-full mt-2 bg-[#451952]">
-                Download now
-              </button>
-            </div>
+          <div className="px-0 md:p-6 py-16 flex items-center justify-between ">
+            <button className="text-white py-2 px-4 rounded-full mt-2 bg-[#451952]">
+              Download now
+            </button>
             <div className="flex gap-4 items-center ">
               <div>
                 <svg
@@ -151,16 +149,16 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <hr className="my-4 border-t border-gray-300" />
-          <div className="flex gap-4 text-xs">
-            <div className=" flex">
-              <p className="ml-6 mr-8 text-sm">Legal Center</p>
-              <p className="mr-8 text-sm">Cookies</p>
-              <p className="mr-8 text-sm">Cookie Policy</p>
-              <p className="mr-8 text-sm">Privacy Policy</p>
-              <p className="mr-8 text-sm">Terms</p>
+          <hr className="py-2 border-t border-gray-300" />
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12   text-xs">
+            <div className=" flex gap-6 justify-center md:justify-start">
+              <p className="text-xs md:text-sm">Legal Center</p>
+              <p className="text-xs md:text-sm">Cookies</p>
+              <p className="text-xs md:text-sm">Cookie Policy</p>
+              <p className="text-xs md:text-sm">Privacy Policy</p>
+              <p className="text-xs md:text-sm">Terms</p>
             </div>
-            <div className="flex justify-end ">
+            <div className="flex justify-center md:justify-end text-xs md:text-sm ">
               <p>
                 2023&nbsp;© VoiceCrypt. All rights reserved.&nbsp;Powered by{" "}
                 <a

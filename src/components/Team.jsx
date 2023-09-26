@@ -41,7 +41,7 @@ const Team = () => {
   ];
   return (
     <div className="flex justify-center items-center">
-      <div className=" bg-lightPurple p-12 px-24 rounded-3xl">
+      <div className=" bg-lightPurple p-12 md:px-24 rounded-3xl">
         <div className="text-4xl p-2 pb-16 text-center font-bold text-white">
           Meet Our Team
         </div>

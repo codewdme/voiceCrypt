@@ -38,7 +38,7 @@ const Menu = ({ handleClose, showMenu }) => {
             scale: 0.2,
             transition: { duration: 2 },
           }}
-          className=" fixed z-10 top-6 left-6 bg-darkPurple flex flex-col gap-6 overflow-hidden rounded-xl p-4 lg:w-[25%] w-full"
+          className=" fixed z-10 top-6 left-6 bg-darkPurple flex flex-col gap-6 overflow-hidden rounded-xl p-4 lg:w-[25%] w-[60%]"
         >
           <motion.div
             variants={containerVariants}
