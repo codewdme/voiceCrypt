@@ -1,12 +1,9 @@
-import React from "react";
-import UploadFile from "../components/UploadFile";
+import React from 'react'
 
 const Mainpage = () => {
   return (
-    <div>
-      <UploadFile />
-    </div>
-  );
-};
+    <div>Mainpage</div>
+  )
+}
 
-export default Mainpage;
+export default Mainpage

@@ -1,47 +1,25 @@
-import React, { useState } from "react";
-import Menu from "./Menu";
-import { motion, AnimatePresence } from "framer-motion";
-
-const Navbar = ({ setShowModal, setShowMenu, showModal }) => {
-  const handleMenuClick = () => {
-    setShowModal(true);
-    setShowMenu(true);
-  };
-
-  const containerVariants = {
-    hidden: { scale: 0 },
-    visible: { scale: 1, transition: { duration: 0.5 } },
-  };
+import React from "react";
+import { Link } from "react-router-dom";
+const Navbar = () => {
   return (
-    <div className="flex p-6  justify-between w-full ">
-      <div className="flex items-center">
-        <AnimatePresence>
-          {/* Capsule Logo and Menu */}
-          {!showModal && (
-            <motion.div
-              variants={containerVariants}
-              className=" flex gap-2 items-center bg-lightPurple p-1 pl-4 rounded-full"
-            >
-              <div className="text-lg font-extrabold text-darkPurple">
-                VoiceCrpyt
-              </div>
-              <div className="text-sm font-semibold flex items-center justify-center  rounded-full btn btn-fill-white hover:z-10 hover:text-darkPurple bg-darkPurple text-white">
-                <button
-                  onClick={handleMenuClick}
-                  className="p-2 px-4 hover:px-4"
-                >
-                  Menu
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+    <div className="bg-black cursor-pointer border-2 border-white flex p-10 items-center justify-between text-sm text-white font-medium">
+      {/* logo */}
+      <div>Hello
+        <svg></svg>
       </div>
-      {/* p-2 px-4 bg-darkPurple text-white rounded-full flex items-center hover:bg-lightPurple hover:text-darkPurple */}
-      {/* Download Button */}
-      <div className=" p-2 px-4 text-sm font-semibold bg-darkPurple hover:bg-transparent  hover:z-10 text-white rounded-full flex items-center  btn btn-fill-purple  hover:text-darkPurple">
-        Download
+      {/* PLayground Learn options */}
+      <div className="flex gap-4">
+        <div className="hover:scale-105 transition hover:ease-in-out">Playground</div>
+        <div className="hover:scale-105 transition hover:ease-in-out">Learn</div>
       </div>
+      {/* Profile / Sign in option */}
+      {/* Logic for showing whether to show profile image or sign in Image */}
+      <Link to="/signin">
+        <button className="p-2 px-4 rounded-xl border-1 border-white"> Sign In</button>
+      </Link>
+      <Link  className="hidden" to="/signin">
+        <button className="p-2 px-4 rounded-xl border-1 border-white"> Sign In</button>
+      </Link>
     </div>
   );
 };

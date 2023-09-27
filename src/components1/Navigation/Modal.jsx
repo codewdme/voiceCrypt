@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect } from "react";
+import Menu from "./Menu";
 
-const Modal = ({ showModal, setShowModal}) => {
+const Modal = ({ showModal, setShowModal, setShowMenu, showMenu }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -9,6 +10,7 @@ const Modal = ({ showModal, setShowModal}) => {
   };
 
   const handleClose = () => {
+    setShowMenu(false);
     setShowModal(false);
   };
 
@@ -23,6 +25,7 @@ const Modal = ({ showModal, setShowModal}) => {
           exit="exit"
           onClick={handleClose}
         >
+          {showMenu && <Menu handleClose={handleClose} showMenu={showMenu} />}
         </motion.div>
       )}
     </AnimatePresence>

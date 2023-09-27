@@ -10,7 +10,6 @@ import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <div>
@@ -23,15 +22,13 @@ const App = () => {
         >
           <Navbar
             setShowModal={setShowModal}
-            setShowMenu={setShowMenu}
             showModal={showModal}
           />
         </Headroom>
         <Modal
           showModal={showModal}
           setShowModal={setShowModal}
-          showMenu={showMenu}
-          setShowMenu={setShowMenu}
+          
         />
         <AnimatePresence wait>
           <Routes>
